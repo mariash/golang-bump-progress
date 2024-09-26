@@ -147,10 +147,5 @@
             "url": "https://hub.docker.com/r/cloudfoundry/tas-runtime-mysql-8.0"
         }
     ],
-    "plugins": [
-        {
-            "name": "cpu-entitlement-plugin",
-            "url": "https://github.com/cloudfoundry/cpu-entitlement-plugin"
-        }
-    ]
+    "plugins": []
 }
