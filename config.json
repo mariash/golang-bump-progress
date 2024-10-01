@@ -125,8 +125,22 @@
             "name": "mapfs",
             "url": "https://github.com/cloudfoundry/mapfs-release",
             "platform": "linux",
-            "ci_team": "wg-sm-volume-services",
+            "ci_team": "wg-arp-volume-services",
             "ci_pipeline": "mapfs-release"
+        },
+        {
+            "name": "nfs-volume",
+            "url": "https://github.com/cloudfoundry/nfs-volume-release",
+            "platform": "linux",
+            "ci_team": "wg-arp-volume-services",
+            "ci_pipeline": "nfs-volume-release"
+        },
+        {
+            "name": "smb-volume",
+            "url": "https://github.com/cloudfoundry/smb-volume-release",
+            "platform": "linux",
+            "ci_team": "wg-arp-volume-services",
+            "ci_pipeline": "smb-volume-release"
         }
     ],
     "images": [
