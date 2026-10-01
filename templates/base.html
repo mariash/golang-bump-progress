@@ -1,0 +1,62 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+div.table-container {
+    margin-top: 80px;
+    max-width: 1500px;
+}
+h1 {
+    margin-bottom: 50px;
+}
+.all-bumped {
+    background-color: #daf1da;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+      $(document).ready(function () {
+        loadData();
+      });
+
+      function loadData()
+      {
+        $.ajax({ url: 'releases_table',
+                 data: 'target={{ .TargetGoVersion }}',
+                 type: 'get',
+                 dataType: 'text',
+                 success : function(data) {
+                   $('#releases_data').html(data);
+                 },
+                });
+        $.ajax({ url: 'images_table',
+                 data: 'target={{ .TargetGoVersion }}',
+                 type: 'get',
+                 dataType: 'text',
+                 success : function(data) {
+                   $('#images_data').html(data);
+                 },
+                });
+        $.ajax({ url: 'plugins_table',
+                 data: 'target={{ .TargetGoVersion }}',
+                 type: 'get',
+                 dataType: 'text',
+                 success : function(data) {
+                   $('#plugins_data').html(data);
+                 },
+                });
+      }
+    </script>
+</head>
+<body>
+<div class="container table-container">
+  <h1>Golang {{ .TargetGoVersion }} bump progress</h1>
+  <h2>Releases</h2>
+  <p id="releases_data">Loading the latest data on dev versions, latest releases and TAS bumps...</p>
+  <h2>Images</h2>
+  <p id="images_data">Loading the latest data on images...</p>
+  <h2>Plugins</h2>
+  <p id="plugins_data">Loading the latest data on plugins...</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Plugin name</th>
+            <th scope="col">Released Golang version</th>
+        <tr>
+    </thead>
+    <tbody>
+        {{range .Plugins}}
+        <tr {{ if .AllBumped }}class="all-bumped"{{ end }}>
+            <td><a href="{{ .URL }}">{{ .Name }}</a></td>
+            <td>{{ .ReleasedVersion }}</td>
+        </tr>
+        {{end}}
+    </tbody>
+</table>

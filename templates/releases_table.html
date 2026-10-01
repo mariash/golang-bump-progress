@@ -1,0 +1,30 @@
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Release name</th>
+            <th scope="col">CI</th>
+            <th scope="col">Golang version on dev</th>
+            <th scope="col">Released Golang version</th>
+            <th scope="col">First minor released Golang version</th>
+            <th scope="col">Release version with the first minor Golang</th>
+            <th scope="col">Golang {{ .GolangVersion }} released in TAS?</th>
+            <th scope="col">Golang {{ .GolangVersion }} released in TASW?</th>
+            <th scope="col">Golang {{ .GolangVersion }} released in IST?</th>
+        <tr>
+    </thead>
+    <tbody>
+        {{range .Releases}}
+        <tr {{ if .AllBumped }}class="all-bumped"{{ end }}>
+            <td><a href="{{ .URL }}">{{ .Name }}</a></td>
+            <td><a href="{{ .CIURL }}"><img height="20px" src="{{ .CIBadgeURL }}"/></a></td>
+            <td>{{ .VersionOnDev }}</td>
+            <td>{{ .ReleasedVersion }}</td>
+            <td>{{ .FirstReleasedGolangVersion }}</td>
+            <td>{{ .FirstReleasedReleaseVersion }}</td>
+            <td>{{ .BumpedInTas }}</td>
+            <td>{{ .BumpedInTasw }}</td>
+            <td>{{ .BumpedInIst }}</td>
+        </tr>
+        {{end}}
+    </tbody>
+</table>

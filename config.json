@@ -1,0 +1,165 @@
+{
+    "ci_url": "https://ci.funtime.lol",
+    "releases": [
+        {
+            "name": "diego (linux)",
+            "url": "https://github.com/cloudfoundry/diego-release",
+            "platform": "linux",
+            "tas_release_name": "diego",
+            "ist_release_name": "diego",
+            "ci_team": "wg-arp-diego",
+            "ci_pipeline": "diego-release"
+        },
+        {
+            "name": "diego (windows)",
+            "url": "https://github.com/cloudfoundry/diego-release",
+            "platform": "windows",
+            "tasw_release_name": "diego",
+            "ci_team": "wg-arp-diego",
+            "ci_pipeline": "diego-release"
+        },
+        {
+            "name": "cf-networking",
+            "url": "https://github.com/cloudfoundry/cf-networking-release",
+            "platform": "linux",
+            "tas_release_name": "cf-networking",
+            "ist_release_name": "cf-networking",
+            "ci_team": "wg-arp-networking",
+            "ci_pipeline": "cf-networking-release"
+        },
+        {
+            "name": "silk",
+            "url": "https://github.com/cloudfoundry/silk-release",
+            "platform": "linux",
+            "tas_release_name": "silk",
+            "ist_release_name": "silk",
+            "ci_team": "wg-arp-networking",
+            "ci_pipeline": "cf-networking-release"
+        },
+        {
+            "name": "garden-runc (linux)",
+            "url": "https://github.com/cloudfoundry/garden-runc-release",
+            "platform": "linux",
+            "tas_release_name": "garden-runc",
+            "ist_release_name": "garden-runc",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "garden-runc-release"
+        },
+        {
+            "name": "garden-runc (windows)",
+            "url": "https://github.com/cloudfoundry/garden-runc-release",
+            "platform": "windows",
+            "tasw_release_name": "garden-runc",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "garden-runc-release"
+        },
+        {
+            "name": "nats",
+            "url": "https://github.com/cloudfoundry/nats-release",
+            "platform": "linux",
+            "tas_release_name": "nats",
+            "ci_team": "wg-arp-networking",
+            "ci_pipeline": "nats-release"
+        },
+        {
+            "name": "routing",
+            "url": "https://github.com/cloudfoundry/routing-release",
+            "platform": "linux",
+            "tas_release_name": "routing",
+            "ci_team": "wg-arp-networking",
+            "ci_pipeline": "routing-release"
+        },
+        {
+            "name": "healthchecker",
+            "url": "https://github.com/cloudfoundry/healthchecker-release",
+            "platform": "linux",
+            "ci_team": "wg-arp-networking",
+            "ci_pipeline": "healthchecker-release"
+        },
+        {
+            "name": "winc",
+            "url": "https://github.com/cloudfoundry/winc-release",
+            "platform": "windows",
+            "tasw_release_name": "winc",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "winc-release"
+        },
+        {
+            "name": "envoy-nginx",
+            "url": "https://github.com/cloudfoundry/envoy-nginx-release",
+            "platform": "windows",
+            "tasw_release_name": "envoy-nginx",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "envoy-nginx-release"
+        },
+        {
+            "name": "windows2019fs",
+            "url": "https://github.com/cloudfoundry/windows2019fs-release",
+            "platform": "windows",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "windows2019fs-release"
+        },
+        {
+            "name": "windowsfs-online",
+            "url": "https://github.com/cloudfoundry/windowsfs-online-release",
+            "platform": "windows",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "windowsfs-online-release"
+        },
+        {
+            "name": "windows-tools",
+            "url": "https://github.com/cloudfoundry/windows-tools-release",
+            "platform": "windows",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "windows-tools-release"
+        },
+        {
+            "name": "test-log-emitter",
+            "url": "https://github.com/cloudfoundry/test-log-emitter-release",
+            "platform": "linux",
+            "ci_team": "wg-arp-garden",
+            "ci_pipeline": "test-log-emitter-release",
+            "only_develop": true
+        },
+        {
+            "name": "mapfs",
+            "url": "https://github.com/cloudfoundry/mapfs-release",
+            "platform": "linux",
+            "ci_team": "wg-arp-volume-services",
+            "ci_pipeline": "mapfs-release"
+        },
+        {
+            "name": "nfs-volume",
+            "url": "https://github.com/cloudfoundry/nfs-volume-release",
+            "platform": "linux",
+            "ci_team": "wg-arp-volume-services",
+            "ci_pipeline": "nfs-volume-release"
+        },
+        {
+            "name": "smb-volume",
+            "url": "https://github.com/cloudfoundry/smb-volume-release",
+            "platform": "linux",
+            "ci_team": "wg-arp-volume-services",
+            "ci_pipeline": "smb-volume-release"
+        }
+    ],
+    "images": [
+        {
+            "name": "cloudfoundry/tas-runtime-build",
+            "url": "https://hub.docker.com/r/cloudfoundry/tas-runtime-build"
+        },
+        {
+            "name": "cloudfoundry/tas-runtime-postgres",
+            "url": "https://hub.docker.com/r/cloudfoundry/tas-runtime-postgres"
+        },
+        {
+            "name": "cloudfoundry/tas-runtime-mysql-5.7",
+            "url": "https://hub.docker.com/r/cloudfoundry/tas-runtime-mysql-5.7"
+        },
+        {
+            "name": "cloudfoundry/tas-runtime-mysql-8.0",
+            "url": "https://hub.docker.com/r/cloudfoundry/tas-runtime-mysql-8.0"
+        }
+    ],
+    "plugins": []
+}

@@ -1,0 +1,16 @@
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Image name</th>
+            <th scope="col">Golang version</th>
+        <tr>
+    </thead>
+    <tbody>
+        {{range .Images}}
+        <tr {{ if .AllBumped }}class="all-bumped"{{ end }}>
+            <td><a href="{{ .URL }}">{{ .Name }}</a></td>
+            <td>{{ .Version }}</td>
+        </tr>
+        {{end}}
+    </tbody>
+</table>
